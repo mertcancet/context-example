@@ -1,10 +1,15 @@
-import "../styles/globals.css";
-import CounterProvider from "/context/CounterContext";
+import CounterProvider from '/context/CounterContext';
+import TodosProvider from '/context/TodosContext';
+
+import '../styles/globals.css';
+
 function MyApp({ Component, pageProps }) {
   return (
-    <CounterProvider>
-      <Component {...pageProps} />
-    </CounterProvider>
+    <TodosProvider>
+      <CounterProvider>
+        <Component {...pageProps} />
+      </CounterProvider>
+    </TodosProvider>
   );
 }
 

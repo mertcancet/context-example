@@ -1,9 +1,11 @@
 import Counter from 'components/Counter';
+import Todo from 'components/Todo';
 
 const Home = () => {
   return (
     <div>
       <Counter />
+      <Todo />
     </div>
   );
 };
